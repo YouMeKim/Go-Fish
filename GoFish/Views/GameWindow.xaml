@@ -1,0 +1,83 @@
+﻿<Window x:Class="GoFish.Views.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GameWindow" Height="900" Width="1500" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <!-- INSTRUCTION -->
+        <StackPanel Grid.Column="0" Grid.Row="3" VerticalAlignment="Center">
+            <TextBlock FontSize="31" TextAlignment="Center" TextWrapping="Wrap" Foreground="Black">Welcome to Go Fish!</TextBlock>
+            <Button x:Name="NextButton" FontSize="25" Click="NextButton_Click" Width="200">Next</Button>
+        </StackPanel>
+        <!-- CURRENT INSTRUCTIONS -->
+        <StackPanel Grid.Column="1" Grid.Row="3" Background="#FF474747">
+            <TextBlock x:Name="InstructionsBlock" FontSize="14" TextAlignment="Left" TextWrapping="Wrap" Background="#FF474747" Foreground="#FFFBFBFB">Instructions Here</TextBlock>
+        </StackPanel>
+        <!-- PLAYER 1 -->
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <TextBlock FontSize="20" TextAlignment="Center">Player 1's Hand</TextBlock>
+            <StackPanel HorizontalAlignment="Center" Name="Player1HandField" Orientation="Horizontal">
+                <!-- Player 1 cards here -->
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">
+            <TextBlock x:Name="Player1ScoreBlock" FontSize="30" TextAlignment="Center" TextWrapping="Wrap">
+                <!-- Player 1 score here -->
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <TextBlock FontSize="20" TextAlignment="Center">Player 1's Completed Sets</TextBlock>
+            <StackPanel HorizontalAlignment="Center" Name="Player1SetsField" Orientation="Horizontal">
+                <!-- Player 1 pairs here-->
+            </StackPanel>
+        </StackPanel>
+        <!-- PLAYER 2 -->
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <TextBlock FontSize="20" TextAlignment="Center">Player 2's Hand</TextBlock>
+            <StackPanel HorizontalAlignment="Center" Name="Player2HandField" Orientation="Horizontal">
+                <!-- Player 2 cards here -->
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
+            <TextBlock x:Name="Player2ScoreBlock" FontSize="30" TextAlignment="Center" TextWrapping="Wrap">
+                <!-- Player 2 score here -->
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="2">
+            <TextBlock FontSize="20" TextAlignment="Center">Player 2's Completed Sets</TextBlock>
+            <StackPanel HorizontalAlignment="Center" Name="Player2SetsField" Orientation="Horizontal">
+                <!-- Player 2 pairs here-->
+            </StackPanel>
+        </StackPanel>
+        <!-- PLAYER -->
+        <StackPanel Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="4">
+            <TextBlock Name="PlayerPairsNameBlock" FontSize="20" TextAlignment="Center">Player's Completed Sets</TextBlock>
+            <StackPanel HorizontalAlignment="Center" Name="PlayerSetsField" Orientation="Horizontal">
+                <!-- Player pairs here-->
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center">
+            <TextBlock x:Name="PlayerScoreBlock" FontSize="30" TextAlignment="Center" TextWrapping="Wrap">
+                <!-- Player score here -->
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="6">
+            <TextBlock Name="PlayerNameBlock" FontSize="20" TextAlignment="Center">Player's Hand</TextBlock>
+            <StackPanel HorizontalAlignment="Center" Name="PlayerHandField" Orientation="Horizontal">
+                <!-- Player cards here -->
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

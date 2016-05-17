@@ -1,0 +1,48 @@
+﻿<Window x:Class="GoFish.Views.PlayerTurnWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PlayerTurnWindow" Height="400" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Center">
+            <TextBlock FontSize="20" TextAlignment="Center">Your Turn</TextBlock>
+            <TextBlock FontSize="15" TextAlignment="Center">Please select what you would like to do</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Column="1" Grid.Row="0" VerticalAlignment="Center">
+                    <TextBlock>Choose a card to ask for</TextBlock>
+                    <ComboBox x:Name="CardChoice">
+                        
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Grid.Column="3" Grid.Row="0" VerticalAlignment="Center">
+                    <TextBlock>Choose a player to ask from</TextBlock>
+                    <ComboBox x:Name="PlayerChoice">
+                        
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2" VerticalAlignment="Center">
+            <Button x:Name="PlayerAskButton" Width="200" Click="PlayerAskButton_Click">Ask for Card</Button>
+        </StackPanel>
+    </Grid>
+</Window>

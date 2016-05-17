@@ -1,0 +1,17 @@
+﻿<Window x:Class="GoFish.Views.GameOverWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GameOverWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="MessageBlock" FontSize="26" TextAlignment="Center">Congratulations!</TextBlock>
+            <TextBlock x:Name="SubMessageBlock" FontSize="20" TextAlignment="Center">Congratulations!</TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
